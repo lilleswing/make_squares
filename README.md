@@ -2,11 +2,8 @@
 
 ## GOPATH vs GOROOT
 `$GOPATH` is important
-`$GOPATH/src` is where raw go source code lives
 
-`go get github.com/lilleswing/make_squares/` will bring this repo into `$GOPATH`
-
-`$GOROOT` points to the golang binary
+`go install` will put things in "main" package in `$GOPATH/bin`
 
 ## Organizing your repo
 
