@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"math"
 	"time"
-	"github.com/lilleswing/make_squares/pkg/make_squares/models"
 )
 
 func main() {

@@ -1,0 +1,19 @@
+{
+  "channels": [
+    "conda-forge"
+  ],
+  "packages": [
+    "nose>=1.3.7",
+    "nose-timer",
+    "requests",
+    "python>=3.6",
+    "requests",
+    "go"
+  ],
+  "wheels": [
+  ],
+  "cpu_packages": [
+  ],
+  "gpu_packages": [
+  ]
+}
