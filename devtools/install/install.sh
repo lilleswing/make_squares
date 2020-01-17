@@ -11,6 +11,16 @@ then
     export CPU_ONLY=1
 fi
 
+export CONDA_EXISTS=`which conda`
+if [[ "$CONDA_EXISTS" = "" ]];
+then
+    wget ${CONDA_URL} -O anaconda.sh;
+    bash anaconda.sh -b -p `pwd`/anaconda
+    export PATH=`pwd`/anaconda/bin:$PATH
+else
+    echo "Using Existing Conda"
+fi
+
 # Install Libraries
 conda config --add channels conda-forge
 if [[ $NO_ENV -eq 0 ]]; then
