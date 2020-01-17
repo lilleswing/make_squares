@@ -4,16 +4,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"strconv"
+	"github.com/lilleswing/make_squares/pkg/make_squares"
 )
 
-
-func SquareIt(a int) string {
-	return strconv.Itoa(a * a)
-}
-
 func sayHello(w http.ResponseWriter, r *http.Request) {
-	var nr NumberRequest
+	var nr make_squares.NumberRequest
 
 	err := json.NewDecoder(r.Body).Decode(&nr)
 	if err != nil {
@@ -21,7 +16,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Println(nr.Value)
-	strResponse := SquareIt(nr.Value)
+	strResponse := make_squares.SquareIt(nr.Value)
 	w.Write([]byte(strResponse))
 }
 func main() {
