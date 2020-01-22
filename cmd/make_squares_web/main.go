@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"net/http"
 	"github.com/lilleswing/make_squares/pkg/make_squares"
+	"net/http"
 )
 
 func sayHello(w http.ResponseWriter, r *http.Request) {
